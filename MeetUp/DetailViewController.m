@@ -28,6 +28,7 @@
 
   NSDictionary*group = [self.dictionary objectForKey:@"group"];
     self.groupLabel.text = [group objectForKey:@"name"];
+
     
 
 
@@ -36,7 +37,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     WebViewController *wVc = segue.destinationViewController;
 
-    
+    wVc.dictioanry = self.dictionary;
 
 
 }

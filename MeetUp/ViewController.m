@@ -28,11 +28,13 @@
 
 
 }
+
+
 #pragma mark Search
 - (IBAction)searchButtonTapped:(UIButton *)sender {
     self.searchFieldTextResult = self.textField.text;
     [self apiMethod];
-    
+
 
 }
 
@@ -70,8 +72,8 @@
     NSDictionary *dictionary = [self.meetUps objectAtIndex:indexPath.row];
 
     cell.textLabel.text = [dictionary objectForKey:@"name"];
+    
     //3rd layer - dictioanry
-
     NSDictionary *venue = [dictionary objectForKey:@"venue"];
     cell.detailTextLabel.text = [venue objectForKey:@"address_1"];
 

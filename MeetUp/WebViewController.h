@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WebViewController : UIViewController
-
+@property NSDictionary *dictioanry;
 
 @end
