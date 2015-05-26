@@ -13,6 +13,8 @@
 @property NSArray *meetUps;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property  NSArray *messageArray;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property NSString *searchFieldTextResult;
 
 @end
 
@@ -23,7 +25,23 @@
     _messageArray = [NSArray new];
     self.meetUps = [NSMutableArray new];
 
-    NSURL *url = [NSURL URLWithString:@"https://api.meetup.com/2/open_events.json?zip=60604&text=mobile&time=,1w&key=477d1928246a4e162252547b766d3c6d"];
+
+
+}
+#pragma mark Search
+- (IBAction)searchButtonTapped:(UIButton *)sender {
+    self.searchFieldTextResult = self.textField.text;
+    [self apiMethod];
+    
+
+}
+
+-(void)apiMethod{
+
+
+    NSString *urlString = [NSString stringWithFormat:@"https://api.meetup.com/2/open_events.json?zip=60604&text=%@&time=,1w&key=477d1928246a4e162252547b766d3c6d",self.searchFieldTextResult];
+
+    NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -34,10 +52,9 @@
         _meetUps = [JSON objectForKey:@"results"];
 
         [self.tableView reloadData];
-
-
+        
+        
     }];
-
 
 }
 

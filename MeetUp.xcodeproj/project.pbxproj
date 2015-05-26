@@ -15,6 +15,7 @@
 		977456151B14F5060096221B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977456131B14F5060096221B /* LaunchScreen.xib */; };
 		977456211B14F5060096221B /* MeetUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 977456201B14F5060096221B /* MeetUpTests.m */; };
 		9774562C1B150DD70096221B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9774562B1B150DD70096221B /* DetailViewController.m */; };
+		9774562F1B151C910096221B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9774562E1B151C910096221B /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		977456201B14F5060096221B /* MeetUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetUpTests.m; sourceTree = "<group>"; };
 		9774562A1B150DD70096221B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		9774562B1B150DD70096221B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		9774562D1B151C910096221B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		9774562E1B151C910096221B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				9774562A1B150DD70096221B /* DetailViewController.h */,
 				9774562B1B150DD70096221B /* DetailViewController.m */,
 				9774560E1B14F5060096221B /* Main.storyboard */,
+				9774562D1B151C910096221B /* WebViewController.h */,
+				9774562E1B151C910096221B /* WebViewController.m */,
 				977456111B14F5060096221B /* Images.xcassets */,
 				977456131B14F5060096221B /* LaunchScreen.xib */,
 				977456041B14F5060096221B /* Supporting Files */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9774560D1B14F5060096221B /* ViewController.m in Sources */,
+				9774562F1B151C910096221B /* WebViewController.m in Sources */,
 				9774560A1B14F5060096221B /* AppDelegate.m in Sources */,
 				977456071B14F5060096221B /* main.m in Sources */,
 				9774562C1B150DD70096221B /* DetailViewController.m in Sources */,
