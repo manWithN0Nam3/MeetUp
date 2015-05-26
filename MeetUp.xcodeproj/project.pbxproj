@@ -14,6 +14,7 @@
 		977456121B14F5060096221B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 977456111B14F5060096221B /* Images.xcassets */; };
 		977456151B14F5060096221B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977456131B14F5060096221B /* LaunchScreen.xib */; };
 		977456211B14F5060096221B /* MeetUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 977456201B14F5060096221B /* MeetUpTests.m */; };
+		9774562C1B150DD70096221B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9774562B1B150DD70096221B /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		9774561A1B14F5060096221B /* MeetUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9774561F1B14F5060096221B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977456201B14F5060096221B /* MeetUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetUpTests.m; sourceTree = "<group>"; };
+		9774562A1B150DD70096221B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		9774562B1B150DD70096221B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				977456091B14F5060096221B /* AppDelegate.m */,
 				9774560B1B14F5060096221B /* ViewController.h */,
 				9774560C1B14F5060096221B /* ViewController.m */,
+				9774562A1B150DD70096221B /* DetailViewController.h */,
+				9774562B1B150DD70096221B /* DetailViewController.m */,
 				9774560E1B14F5060096221B /* Main.storyboard */,
 				977456111B14F5060096221B /* Images.xcassets */,
 				977456131B14F5060096221B /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				9774560D1B14F5060096221B /* ViewController.m in Sources */,
 				9774560A1B14F5060096221B /* AppDelegate.m in Sources */,
 				977456071B14F5060096221B /* main.m in Sources */,
+				9774562C1B150DD70096221B /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
