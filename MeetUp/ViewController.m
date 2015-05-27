@@ -27,6 +27,25 @@
 
 
 
+    NSString *urlString = [NSString stringWithFormat:@"https://api.meetup.com/2/open_events.json?zip=60604&text=mobile&time=,1w&key=477d1928246a4e162252547b766d3c6d"];
+
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+
+        //original layer
+        NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&connectionError];
+        //first layer - array
+        self.meetUps = [JSON objectForKey:@"results"];
+
+        [self.tableView reloadData];
+
+        
+    }];
+
+
+
 }
 
 
@@ -51,7 +70,7 @@
         //original layer
         NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&connectionError];
         //first layer - array
-        _meetUps = [JSON objectForKey:@"results"];
+        self.meetUps = [JSON objectForKey:@"results"];
 
         [self.tableView reloadData];
         

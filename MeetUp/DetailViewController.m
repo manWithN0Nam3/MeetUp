@@ -23,7 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.name.text = [self.dictionary objectForKey:@"name"];
-    self.descriptionLabel.text = [self.dictionary objectForKey:@"description"];
+//    self.descriptionLabel.text = [self.dictionary objectForKey:@"description"];
+    self.descriptionLabel.text=[self convertHTML:[self.dictionary objectForKey:@"description"]];
+//]];
     self.rsvpLabel.text = [NSString stringWithFormat:@"%@",[self.dictionary objectForKey:@"yes_rsvp_count"]];
 
   NSDictionary*group = [self.dictionary objectForKey:@"group"];
@@ -33,6 +35,28 @@
 
 
 }
+
+
+-(NSString *)convertHTML:(NSString *)html {
+
+    NSScanner *myScanner;
+    NSString *text = nil;
+    myScanner = [NSScanner scannerWithString:html];
+
+    while (myScanner.isAtEnd == NO) {
+
+        [myScanner scanUpToString:@"<" intoString:NULL] ;
+
+        [myScanner scanUpToString:@">" intoString:&text] ;
+
+        html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", text] withString:@""];
+    }
+    //
+    html = [html stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    return html;
+}
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     WebViewController *wVc = segue.destinationViewController;
