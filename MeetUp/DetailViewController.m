@@ -30,6 +30,7 @@
 
   NSDictionary*group = [self.dictionary objectForKey:@"group"];
     self.groupLabel.text = [group objectForKey:@"name"];
+    
 
     
 

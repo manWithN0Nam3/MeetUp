@@ -73,7 +73,7 @@
         self.meetUps = [JSON objectForKey:@"results"];
 
         [self.tableView reloadData];
-        
+
         
     }];
 
@@ -91,10 +91,11 @@
     NSDictionary *dictionary = [self.meetUps objectAtIndex:indexPath.row];
 
     cell.textLabel.text = [dictionary objectForKey:@"name"];
+    cell.detailTextLabel.text = [dictionary objectForKey:@"status"];
     
     //3rd layer - dictioanry
     NSDictionary *venue = [dictionary objectForKey:@"venue"];
-    cell.detailTextLabel.text = [venue objectForKey:@"address_1"];
+//    cell.detailTextLabel.text = [venue objectForKey:@"address_1"];
 
     return cell;
 
